@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-family-montserrat: 'Montserrat';
+}
+
+body {
+  font-family: var(--font-family-montserrat);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-montserrat);
+}
+
+p, span, a, li, input, button, label, small {
+  font-family: var(--font-family-montserrat);
+}
+
+.progress-indicator {
+  width: 0%;
+  transition: width 0.1s ease;
+}
+
+.progress-indicator {
+  animation: progressAnimation 2s ease-in-out infinite;
+}
+
+@keyframes progressAnimation {
+  0% { width: 0%; }
+  50% { width: 100%; }
+  100% { width: 0%; }
+}
+
+@property --x {
+    syntax: "<percentage>";
+    initial-value: 0%;
+    inherits: false;
+}
+
+@property --y {
+    syntax: "<percentage>";
+    initial-value: 0%;
+    inherits: false;
+}
+
+.gradient-button {
+    position: relative;
+    padding: 15px 35px;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    background: radial-gradient(
+        circle at var(--x) var(--y),
+        #FF70A6 10%,
+        #9B76B8 30%,
+        #130303 60%
+    );
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+    animation: moveGradient 5s linear infinite;
+}
+
+.gradient-button:hover {
+    transform: scale(1.05);
+}
+
+.gradient-button:active {
+    transform: scale(0.98);
+} 
+
+@keyframes moveGradient {
+    0% {
+        --x: -20%;
+        --y: -20%;
+    }
+    25% {
+        --x: 120%;
+        --y: -20%;
+    }
+    50% {
+        --x: 120%;
+        --y: 120%;
+    }
+    62.5% {
+        --x: 50%;
+        --y: 130%;
+    }
+    75% {
+        --x: -20%;
+        --y: 120%;
+    }
+    100% {
+        --x: -20%;
+        --y: -20%;
+    }
+}
