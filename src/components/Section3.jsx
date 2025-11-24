@@ -97,7 +97,7 @@ function Section3() {
     >
       <h2
         ref={headingRef}
-        className="text-4xl md:text-6xl font-bold text-center max-w-3xl leading-tight"
+        className="text-4xl md:text-4xl font-bold text-center max-w-3xl leading-tight"
       >
         Discover the new way of personalized investing with Investza
       </h2>
@@ -159,48 +159,6 @@ function Section3() {
           Download
         </button>
       </div>
-      {/* 
-      <div
-        ref={cardRef}
-        className="bg-neutral-900 p-8 rounded-2xl border border-neutral-800 shadow-xl max-w-md w-full hover:border-neutral-700 transition-all duration-300"
-      >
-        <h4 className="text-indigo-400 font-semibold">
-          Download the Wealth Tracker App today!
-        </h4>
-        <h4 className="text-indigo-400 font-semibold">
-          Use our app to your advantage.
-        </h4>
-
-        <p className="text-gray-400 mt-3">Min. Investment: 50 Lakhs</p>
-
-        <li className="flex items-start gap-2">
-          What you can expect working with Investza:
-        </li>
-        <div className="border-t border-neutral-700 my-6" />
-        <ul className="space-y-3 text-gray-300">
-          <li className="flex items-start gap-2">
-            <span className="text-indigo-400 mt-1">•</span>
-            Strategies tailored only for you
-          </li>
-
-          <li className="flex items-start gap-2">
-            <span className="text-indigo-400 mt-1">•</span>
-            Wealth Creation and Preservation always built in to our strategies
-          </li>
-
-          <li className="flex items-start gap-2">
-            <span className="text-indigo-400 mt-1">•</span>
-            High quality debt with stable returns
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="text-indigo-400 mt-1">•</span>
-            Investing for a robust tomorrow{" "}
-          </li>
-        </ul>
-        <button className="mt-8 w-full bg-indigo-600 hover:bg-indigo-500 text-white py-3 rounded-xl font-semibold transition-all duration-300">
-          Download
-        </button>
-      </div> */}
     </div>
   );
 }

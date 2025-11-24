@@ -71,6 +71,41 @@ p, span, a, li, input, button, label, small {
     transform: scale(0.98);
 } 
 
+
+/* ================================
+   Tablet (768px and below)
+================================ */
+@media (max-width: 768px) {
+    .gradient-button {
+        padding: 12px 28px;
+        font-size: 18px;
+        border-radius: 26px;
+    }
+}
+
+/* ================================
+   Mobile (576px and below)
+================================ */
+@media (max-width: 576px) {
+    .gradient-button {
+        padding: 10px 10px;
+        font-size: 10px;
+        border-radius: 22px;
+
+    }
+}
+
+/* ================================
+   Extra Small Mobile (360px and below)
+================================ */
+@media (max-width: 360px) {
+    .gradient-button {
+        padding: 8px 10px;
+        font-size: 10px;
+        border-radius: 20px;
+    }
+}
+
 @keyframes moveGradient {
     0% {
         --x: -20%;

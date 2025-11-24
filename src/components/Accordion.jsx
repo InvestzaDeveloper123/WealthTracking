@@ -232,20 +232,14 @@ function Accordion() {
   return (
     <section className="relative bg-black text-white py-18 px-6 md:px-12">
       <div className=" mx-auto text-center mb-12 space-y-2">
-        {/* <h2 className="text-2xl md:text-3xl font-medium bg-gradient-to-r from-indigo-300 via-purple-400 to-pink-400 bg-clip-text text-transparent tracking-normal leading-snug">
-          You can’t grow what you can’t measure
-        </h2> */}
-        {/* <h2 className="text-4xl md:text-6xl font-bold bg-linear-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-          You can’t grow what you can’t measure
-        </h2> */}
-        <h2 className="text-4xl md:text-6xl font-bold bg-linear-to-r pb-10 text-white bg-clip-text text-transparent">
+        <h2 className="text-4xl  md:text-4xl font-bold bg-linear-to-r pb-10 text-white bg-clip-text text-transparent sm:text-2xl">
           You can’t grow what you can’t measure.
         </h2>
       </div>
 
       {/* Section Header */}
       <div className="max-w-3xl mx-auto text-center mb-14 space-y-3">
-        <h2 className="text-4xl md:text-5xl font-semibold bg-linear-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+        <h2 className="text-4xl md:text-3xl font-semibold bg-linear-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent sm:text-xl">
           Got Questions? We got your covered
         </h2>
         <p className="text-gray-400 text-lg">We're here to help.</p>
@@ -262,7 +256,7 @@ function Accordion() {
               onClick={() => toggleAccordion(index)}
               className="w-full flex justify-between items-center px-6 py-5 text-left"
             >
-              <span className="text-lg md:text-xl font-semibold text-white">
+              <span className="text-lg md:text-sm font-semibold text-white">
                 {item.question}
               </span>
               <span
@@ -277,10 +271,10 @@ function Accordion() {
             </button>
 
             <div
-              className={`px-6 text-gray-400 text-base leading-relaxed transition-all duration-500 ease-in-out ${
+              className={` px-6 text-gray-400 text-base leading-relaxed transition-all duration-500 ease-in-out ${
                 activeIndex === index
-                  ? "max-h-[400px] py-4 opacity-100 w-full text-left"
-                  : "max-h-0 opacity-0 overflow-hidden w-full text-left"
+                  ? "max-h-[400px] py-4 opacity-100 w-full text-left md:text-sm sm:text-s"
+                  : "max-h-0 opacity-0 overflow-hidden w-full text-left md:text-sm sm:text-s"
               }`}
             >
               {item.answer}

@@ -153,21 +153,6 @@ function HeroSection() {
             </span>
           ))}
         </h1>
-
-        {/* <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black max-w-6xl mx-auto leading-tight md:leading-snug mb-6 tracking-tight">
-          {headlineWords.map((word, index) => (
-            <span
-              key={index}
-              className="hero-word inline-block mr-3 bg-linear-to-r from-white to-gray-300 bg-clip-text text-transparent"
-              style={{
-                backgroundSize: "200% 100%",
-                backgroundPosition: "0% 0%",
-              }}
-            >
-              {word}
-            </span>
-          ))}
-        </h1> */}
         <p className="font-montserrat text-white text-lg md:text-xl max-w-3xl mx-auto font-normal opacity-90">
           Have full control over your Investments with us.
         </p>
@@ -188,13 +173,6 @@ function HeroSection() {
           ref={createRef("newText")}
           className="opacity-0 mt-8 text-center flex flex-col items-center justify-center max-w-3xl"
         >
-          {/* <p className="text-base md:text-lg lg:text-xl text-white/80 leading-relaxed mb-8 px-4">
-            Track, manage and invest your money better with the help of{" "}
-            <span className="bg-linear-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent font-semibold">
-              India's leading experts.
-            </span>
-          </p> */}
-
           <p className="text-base md:text-lg lg:text-xl text-white/80 leading-relaxed mb-8 px-4">
             Your wealth deserves more than vague updates. Investza’s Wealth
             Tracker consolidates and analyses every rupee across all your
@@ -206,9 +184,6 @@ function HeroSection() {
           <button className="gradient-button px-6 py-3 rounded-full text-white font-semibold cursor-pointer border-none">
             Review My Portfolio
           </button>
-          {/* <button className="px-10 py-4 text-base font-semibold bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white rounded-full hover:scale-105 active:scale-95 transition-all duration-300 shadow-lg hover:shadow-xl shadow-blue-500/25 hover:shadow-blue-500/40 focus:outline-none focus:ring-4 focus:ring-blue-500/30">
-            Review My Portfolio
-          </button> */}
         </div>
       </div>
 
@@ -219,7 +194,7 @@ function HeroSection() {
             ref={createRef("image")}
             src={mobileimg}
             alt="Mobile app preview showing investment tracking interface"
-            className="max-w-26 sm:max-w-34 md:max-w-42 lg:max-w-50 xl:max-w-85 w-auto h-auto transition-all duration-500 ease-out group-hover:scale-105"
+            className="max-w-40 sm:max-w-34 md:max-w-42 lg:max-w-50 xl:max-w-85 w-auto h-auto transition-all duration-500 ease-out group-hover:scale-105"
             style={{
               transformStyle: "preserve-3d",
               backfaceVisibility: "hidden",
@@ -227,19 +202,6 @@ function HeroSection() {
             loading="eager"
             decoding="async"
           />
-
-          {/* <img
-            ref={createRef("image")}
-            src={mobileimg}
-            alt="Mobile app preview showing investment tracking interface"
-            className="max-w-28 sm:max-w-36 md:max-w-44 lg:max-w-52 xl:max-w-64 w-auto h-auto transition-all duration-500 ease-out group-hover:scale-105"
-            style={{
-              transformStyle: "preserve-3d",
-              backfaceVisibility: "hidden",
-            }}
-            loading="eager"
-            decoding="async"
-          /> */}
 
           <div className="absolute inset-0 bg-linear-to-br from-blue-500/30 via-purple-500/20 to-cyan-500/20 rounded-4xl blur-2xl -z-10 opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
         </div>
