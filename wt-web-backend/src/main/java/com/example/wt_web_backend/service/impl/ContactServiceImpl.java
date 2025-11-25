@@ -1,6 +1,7 @@
 package com.example.wt_web_backend.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.mail.javamail.JavaMailSender;
@@ -26,6 +27,9 @@ public class ContactServiceImpl implements ContactService {
     @Autowired
     private ResourceLoader resourceLoader;
 
+    @Value("${spring.mail.username}")
+    private String fromEmail;
+
     // flow will be proceed
     @Override
     public void processForm(ContactMessageRequest dto) {
@@ -34,7 +38,7 @@ public class ContactServiceImpl implements ContactService {
         try {
             sendMail(dto);  // confirmation mail will be send to user
         } catch (Exception e) {
-            throw new RuntimeException("Unable to send email");
+            throw new RuntimeException(e.getMessage());
         }
     }
 
@@ -61,6 +65,7 @@ public class ContactServiceImpl implements ContactService {
         MimeMessage mime = mailSender.createMimeMessage();
         MimeMessageHelper helper = new MimeMessageHelper(mime, true, "UTF-8");
 
+        helper.setFrom(fromEmail);
         helper.setTo(msg.getEmail());
         helper.setSubject("Thank You for Contacting Us - Investza");
         helper.setText(html, true);
