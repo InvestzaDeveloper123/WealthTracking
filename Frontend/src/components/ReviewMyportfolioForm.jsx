@@ -40,7 +40,7 @@ function ReviewMyportfolioForm({ onClose }) {
                focus:ring-2 focus:ring-purple-500 
                outline-none text-black 
                placeholder-gray-600
-               text-base sm:text-lg text-2xl"
+               text-base sm:text-lg text-2xl" required
           />
 
           <input
@@ -55,7 +55,7 @@ function ReviewMyportfolioForm({ onClose }) {
                focus:ring-2 focus:ring-purple-500 
                outline-none text-black 
                placeholder-gray-600
-               text-base sm:text-lg"
+               text-base sm:text-lg" required
           />
 
           <button

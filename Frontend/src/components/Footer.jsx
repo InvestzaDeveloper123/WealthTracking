@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import "./Footer.css";
+import { sendMessage } from "../apis/flowApis";
 
 const Footer = () => {
   const [formData, setFormData] = useState({
@@ -23,7 +24,7 @@ const Footer = () => {
     setRecaptchaToken(token);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!recaptchaToken) {
@@ -31,9 +32,11 @@ const Footer = () => {
       return;
     }
 
+    const response = await sendMessage(formData.name, formData.email, formData.subject, formData.message);
+
     // Handle form submission
-    console.log("Form submitted:", formData);
-    console.log("reCAPTCHA token:", recaptchaToken);
+    // console.log("Form submitted:", formData);
+    // console.log("reCAPTCHA token:", recaptchaToken);
 
     // Reset form
     setFormData({
