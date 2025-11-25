@@ -1,13 +1,22 @@
-import React, { useEffect, useRef, useCallback } from "react";
+import React, {
+  useEffect,
+  useRef,
+  useCallback,
+  useState,
+  useContext,
+} from "react";
 import { FaChevronDown } from "react-icons/fa";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import mobileimg from "../assets/mockupFront.png";
+import { showFormContext } from "../contexts/showFormContext";
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.config({ force3D: true, autoSleep: 60, nullTargetWarn: false });
 
 function HeroSection() {
+  const { showForm, setShowForm } = useContext(showFormContext);
+
   const refs = useRef({
     hero: null,
     image: null,
@@ -132,7 +141,6 @@ function HeroSection() {
           transform: "translateZ(0)",
         }}
       />
-
       {/* Text Container */}
       <div
         ref={createRef("textContainer")}
@@ -181,12 +189,14 @@ function HeroSection() {
               India's leading experts.
             </span>
           </p>
-          <button className="gradient-button px-6 py-3 rounded-full text-white font-semibold cursor-pointer border-none">
+          <button
+            className="gradient-button px-6 py-3 rounded-full text-white font-semibold cursor-pointer border-none"
+            onClick={() => setShowForm(true)}
+          >
             Review My Portfolio
           </button>
         </div>
       </div>
-
       {/* Floating Image */}
       <div className="absolute bottom-270 left-1/2 transform -translate-x-1/2 z-20 pointer-events-none">
         <div className="relative group">
