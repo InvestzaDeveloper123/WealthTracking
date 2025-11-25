@@ -48,17 +48,6 @@ function Navbar() {
           >
             Download App
           </button>
-
-          {/* <button
-            className="text-white/90 hover:text-white transition-colors duration-300 text-xs md:text-base font-medium cursor-pointer"
-            aria-label="Member Login"
-            onClick={() =>
-              (window.location.href =
-                "https://play.google.com/store/apps/details?id=com.nvcproject.InvestzaApp&pcampaignid=web_share")
-            }
-          >
-            Download Wealth Tracker
-          </button> */}
           <button
             className="gradient-button px-6 py-3 rounded-full text-white font-semibold cursor-pointer border-none"
             onClick={() => setShowForm(true)}
